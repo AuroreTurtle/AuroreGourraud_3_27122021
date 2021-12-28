@@ -49,7 +49,7 @@ h1 {
 }
 
 /* Police pour le texte */
-p {
+p, a {
   font-family: "Roboto", sans-serif;
 }
 
@@ -61,6 +61,18 @@ header {
 header img {
   width: 170px;
   margin: 20px 0 10px 0;
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.712);
+  padding: 5%;
+}
+footer li {
+  padding-top: 2%;
+}
+footer a {
+  color: white;
+  text-decoration: none;
 }
 
 /* Fichiers du dossier Utils */
