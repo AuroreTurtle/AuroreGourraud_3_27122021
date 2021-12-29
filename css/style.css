@@ -49,11 +49,15 @@ td, th {
   font-family: "Roboto", sans-serif;
 }
 
-/* Police pour les titres des menus */
-h1 {
-  font-family: "Shrikhand", cursive;
+h1, h2 {
+  font-size: 20px;
+  font-weight: bold;
 }
 
+/* Police pour les titres des menus
+h1 {
+    font-family: 'Shrikhand', cursive;
+} */
 button {
   color: white;
   background: linear-gradient(#FF79DA, #9356DC);
@@ -91,12 +95,41 @@ footer a {
   border-top: 2px solid grey;
   font-weight: bold;
   padding: 10px 0 10px 0;
+  text-align: center;
 }
 
 /* Pour la présentation */
 #presentation {
   background-color: #e9e7e7;
-  padding: 5% 0 5% 0;
+  padding: 5% 2% 8% 2%;
+  text-align: center;
+}
+#presentation h1 {
+  padding: 0 45px 0 45px;
+}
+#presentation p {
+  color: #747070;
+  margin: 15px 0 25px 0;
+}
+
+/* Etape de fonctionnement */
+#fonctionnement p {
+  background-color: #e9e7e7;
+  border-radius: 20px;
+  width: 250px;
+  height: 50px;
+  text-align: center;
+}
+
+.step {
+  background-color: #9356DC;
+  color: white;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Fichiers du dossier Utils */
