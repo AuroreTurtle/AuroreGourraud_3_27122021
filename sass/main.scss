@@ -1,10 +1,16 @@
 /* Fichiers du dossier Utils */
-@use "./utils/variables";
+@use "./utils/variables.scss";
 
 /* Fichiers du dossier Base */
 @use "./base/reset.scss";
 @use "./base/police.scss";
 
+/* Fichiers du dossier Components */
+@use "./components/bouton.scss";
+
 /* Fichiers du dossier Layout */
 @use "./layout/header.scss";
 @use "./layout/footer.scss";
+
+/* Fichiers du dossier Pages */
+@use "./pages/home.scss";

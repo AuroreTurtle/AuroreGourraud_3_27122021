@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -43,14 +44,23 @@ td, th {
   padding: 0;
 }
 
-/* Police pour les titres */
+/* Police pour le texte */
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Police pour les titres des menus */
 h1 {
   font-family: "Shrikhand", cursive;
 }
 
-/* Police pour le texte */
-p, a {
-  font-family: "Roboto", sans-serif;
+button {
+  color: white;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: none;
+  border-radius: 20px;
+  height: 40px;
+  width: 190px;
 }
 
 /* Logo */
@@ -75,8 +85,24 @@ footer a {
   text-decoration: none;
 }
 
+/* Pour la localisation */
+#localisation {
+  background-color: #d1cece;
+  border-top: 2px solid grey;
+  font-weight: bold;
+  padding: 10px 0 10px 0;
+}
+
+/* Pour la présentation */
+#presentation {
+  background-color: #e9e7e7;
+  padding: 5% 0 5% 0;
+}
+
 /* Fichiers du dossier Utils */
 /* Fichiers du dossier Base */
+/* Fichiers du dossier Components */
 /* Fichiers du dossier Layout */
+/* Fichiers du dossier Pages */
 
 /*# sourceMappingURL=style.css.map */
