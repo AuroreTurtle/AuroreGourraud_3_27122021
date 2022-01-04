@@ -54,6 +54,14 @@ h1, h2 {
   font-weight: bold;
 }
 
+h2 {
+  margin: 8% 0 5% 3%;
+}
+
+p {
+  font-size: 15px;
+}
+
 /* Police pour les titres des menus
 h1 {
     font-family: 'Shrikhand', cursive;
@@ -88,6 +96,9 @@ footer a {
   color: white;
   text-decoration: none;
 }
+footer .fas {
+  padding-right: 10px;
+}
 
 /* Pour la localisation */
 #localisation {
@@ -109,27 +120,50 @@ footer a {
 }
 #presentation p {
   color: #747070;
-  margin: 15px 0 25px 0;
+  margin: 15px 10px 25px 10px;
 }
 
 /* Etape de fonctionnement */
+#fonctionnement {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 #fonctionnement p {
   background-color: #e9e7e7;
   border-radius: 20px;
-  width: 250px;
+  width: 270px;
   height: 50px;
   text-align: center;
+  padding: 15px 30px 0 0;
 }
-
-.step {
-  background-color: #9356DC;
-  color: white;
-  border-radius: 50%;
-  height: 25px;
-  width: 25px;
+#fonctionnement .fas {
+  padding: 0 20px 0 10px;
+}
+#fonctionnement .fa-store {
+  color: #9356DC;
+}
+#fonctionnement .titre {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 10px;
+  font-weight: bold;
+  margin-left: 3%;
+}
+#fonctionnement .step {
+  background-color: #9356DC;
+  color: white;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: -10px;
+  z-index: 1;
+  font-size: 10px;
 }
 
 /* Fichiers du dossier Utils */
