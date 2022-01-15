@@ -87,9 +87,15 @@ button {
   border-radius: 20px;
   height: 40px;
   width: 190px;
+  box-shadow: 5px 5px 5px #c9c6c6;
+}
+button:hover {
+  box-shadow: 5px 5px 5px #9c9a9a;
+  background: linear-gradient(#f76ed0, #ac6ef7);
 }
 
 /* Bouton "J'aime" en forme de coeur */
+/* A faire !!! */
 .fa-heart {
   font-size: 20px;
 }
