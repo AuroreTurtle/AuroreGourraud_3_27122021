@@ -61,6 +61,10 @@ h2 {
   padding: 8% 0 5% 3%;
 }
 
+h3 {
+  font-weight: bold;
+}
+
 p {
   font-size: 15px;
 }
@@ -70,6 +74,11 @@ h1 {
     font-family: 'Shrikhand', cursive;
 } */
 /* Fichiers du dossier Components */
+a {
+  text-decoration: none;
+  color: black;
+}
+
 /* Couleurs */
 button {
   color: white;
@@ -78,6 +87,14 @@ button {
   border-radius: 20px;
   height: 40px;
   width: 190px;
+}
+
+/* Bouton "J'aime" en forme de coeur */
+.fa-heart {
+  font-size: 20px;
+}
+.fa-heart:hover {
+  background: linear-gradient(#FF79DA, #9356DC);
 }
 
 /* Fichiers du dossier Layout */
@@ -95,12 +112,17 @@ footer {
   background: rgba(0, 0, 0, 0.712);
   padding: 5%;
 }
+footer img {
+  filter: invert(100%);
+  /* permet d'inverser les couleurs de l'image donc ici mettre le logo en blanc */
+  width: 100px;
+  margin-bottom: 3%;
+}
 footer li {
   padding-top: 2%;
 }
 footer a {
   color: white;
-  text-decoration: none;
 }
 footer .fas {
   padding-right: 10px;
@@ -113,8 +135,12 @@ footer .fas {
   background-color: #d1cece;
   border-top: 2px solid grey;
   font-weight: bold;
-  padding: 10px 0 10px 0;
+  padding: 5px 0 5px 0;
   text-align: center;
+}
+#localisation input {
+  border: none;
+  width: 130px;
 }
 
 /* Pour la présentation */
@@ -129,6 +155,9 @@ footer .fas {
 #presentation p {
   color: #747070;
   margin: 15px 10px 25px 10px;
+}
+#presentation a {
+  color: white;
 }
 
 /* Etape de fonctionnement */
@@ -179,18 +208,54 @@ footer .fas {
 /* Restaurants */
 .resto {
   background-color: rgba(241, 237, 237, 0.918);
+  padding-bottom: 10%;
 }
 
 .carte {
-  width: 90%;
-  margin: 2% 5% 2% 5%;
+  width: 95%;
+  margin: 2% 5% 4% 5%;
+  background-color: white;
+  border-radius: 10px;
+  width: 335px;
+  height: 230px;
+  position: relative;
 }
-.carte img {
-  border-radius: 5% 5% 0 0;
+.carte_image {
+  height: 75%;
+}
+.carte_image img {
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* pour "monter" l'image */
+  object-position: left bottom;
+}
+.carte_image--centre img {
+  /* permet de centrer l'image sur l'assiette */
+  object-position: 0% 62%;
+}
+.carte_image_texte {
+  font-weight: bold;
+  color: green;
+  background-color: #99E2D0;
+  border-radius: 3px;
+  position: absolute;
+  top: 5%;
+  right: 3%;
+  transform: translate(-3%, -5%);
+  padding: 7px;
 }
 .carte_description {
-  background-color: white;
-  padding: 2%;
+  padding: 3%;
+  position: relative;
+}
+.carte_coeur {
+  /* pour positionner le coeur à droite */
+  position: absolute;
+  top: 40%;
+  right: 5%;
+  transform: translate(-5%, -40%);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -8,3 +8,12 @@ button {
     height: 40px;
     width: 190px;
 }
+
+/* Bouton "J'aime" en forme de coeur */ 
+.fa-heart {
+    font-size: 20px;
+
+    &:hover{
+        background: linear-gradient($couleur-secondaire, $couleur-primaire);
+    }
+}

@@ -5,8 +5,13 @@
     background-color: rgb(209, 206, 206);
     border-top: 2px solid grey;
     font-weight: bold;
-    padding: 10px 0 10px 0;
+    padding: 5px 0 5px 0;
     text-align: center;
+
+    input {
+        border: none;
+        width: 130px;
+    }
 }
 
 /* Pour la présentation */
@@ -22,6 +27,10 @@
     p {
         color: rgb(116, 112, 112);
         margin: 15px 10px 25px 10px;
+    }
+
+    a {
+        color: white;
     }
 }
 
@@ -78,18 +87,60 @@
 /* Restaurants */
 .resto {
     background-color: $couleur-principal-fond;
+    padding-bottom: 10%;
 }
 
 .carte {
-    width: 90%;
-    margin: 2% 5% 2% 5%;
+    width: 95%;
+    margin: 2% 5% 4% 5%;
+    background-color: white;
+    border-radius: 10px;
+    width: 335px;
+    height: 230px;
+    position: relative;    
 
-    img {
-        border-radius: 5% 5% 0 0;
+    &_image {
+        height: 75%;
+
+        img {
+            border-radius: 10px 10px 0 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* pour "monter" l'image */
+            object-position: left bottom;
+        }
+
+        &--centre {
+            img {
+                /* permet de centrer l'image sur l'assiette */
+                object-position: 0% 62%;
+            }
+        }
+        
+        &_texte {
+            font-weight: bold;
+            color: green;
+            background-color: $couleur-tertiaire;
+            border-radius: 3px;
+            position: absolute;
+            top: 5%;
+            right: 3%;
+            transform: translate(-3%, -5%);
+            padding: 7px;
+        }
     }
 
     &_description {
-        background-color: white;
-        padding: 2%;
+        padding: 3%;
+        position: relative;
+    }
+
+    &_coeur {
+        /* pour positionner le coeur à droite */
+        position: absolute;
+        top: 40%;
+        right: 5%;
+        transform: translate(-5%, -40%);
     }
 }

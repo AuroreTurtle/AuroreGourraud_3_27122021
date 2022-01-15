@@ -2,13 +2,18 @@ footer {
     background: rgba(0, 0, 0, 0.712);
     padding: 5%;
 
+    img {
+        filter: invert(100%); /* permet d'inverser les couleurs de l'image donc ici mettre le logo en blanc */
+        width: 100px;
+        margin-bottom: 3%;
+    }
+
     li{
         padding-top: 2%;
     }
 
     a {
         color: white;
-        text-decoration: none;
     }
 
     .fas {
