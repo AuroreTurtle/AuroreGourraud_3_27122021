@@ -91,16 +91,46 @@ button {
 }
 button:hover {
   box-shadow: 5px 5px 5px #9c9a9a;
+  /* Couleurs s'éclaircissement au survol */
   background: linear-gradient(#f76ed0, #ac6ef7);
 }
 
 /* Bouton "J'aime" en forme de coeur */
-/* A faire !!! */
 .fa-heart {
   font-size: 20px;
+  position: absolute;
 }
-.fa-heart:hover {
-  background: linear-gradient(#FF79DA, #9356DC);
+
+.carte_coeur {
+  width: 30px;
+  height: 30px;
+  /* pour positionner le coeur à droite */
+  position: absolute;
+  top: 60%;
+  right: 2%;
+  transform: translate(-2%, -60%);
+}
+.carte_coeur:hover .icone-pleine {
+  transform: scale(1);
+  /* au survol le coeur plein apparait */
+}
+
+.icone-vide:hover {
+  color: #9356DC;
+}
+
+.icone-pleine {
+  color: transparent;
+  /* En mettant transparent le gradient peut s'afficher */
+  background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
+  background-clip: text;
+  /* permet d'avoir le fond en forme de coeur et non un carré */
+  -webkit-background-clip: text;
+  transform: scale(0);
+  /* le coeur n'est pas visible, taille = 0 */
+  transform-origin: bottom;
+  /* le coeur se remplit à partir du bas */
+  transition: transform 400ms ease-in-out;
 }
 
 /* Fichiers du dossier Layout */
@@ -255,13 +285,6 @@ footer .fas {
 .carte_description {
   padding: 3%;
   position: relative;
-}
-.carte_coeur {
-  /* pour positionner le coeur à droite */
-  position: absolute;
-  top: 40%;
-  right: 5%;
-  transform: translate(-5%, -40%);
 }
 
 /*# sourceMappingURL=style.css.map */

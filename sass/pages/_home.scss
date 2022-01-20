@@ -135,12 +135,4 @@
         padding: 3%;
         position: relative;
     }
-
-    &_coeur {
-        /* pour positionner le coeur à droite */
-        position: absolute;
-        top: 40%;
-        right: 5%;
-        transform: translate(-5%, -40%);
-    }
 }

@@ -7,22 +7,48 @@ button {
     border-radius: 20px;
     height: 40px;
     width: 190px;
-
     box-shadow: 5px 5px 5px rgb(201, 198, 198);
 
     &:hover {
         box-shadow: 5px 5px 5px #9c9a9a;
-        background: linear-gradient(hsl(317, 90, 70), hsl(267, 90, 70));
+        /* Couleurs s'éclaircissement au survol */
+        background: linear-gradient(hsl(317, 90%, 70%), hsl(267, 90%, 70%));
     }
 }
 
 /* Bouton "J'aime" en forme de coeur */ 
-/* A faire !!! */
 .fa-heart {
-    font-size: 20px;
-    
-    &:hover {
-        background: linear-gradient($couleur-secondaire, $couleur-primaire);       
-    }
+    font-size: 20px;  
+    position: absolute;
+}
 
+.carte_coeur {
+    width: 30px;
+    height: 30px;
+
+    /* pour positionner le coeur à droite */
+    position: absolute;
+    top: 60%;
+    right: 2%;
+    transform: translate(-2%, -60%);
+
+    &:hover .icone-pleine {
+        transform: scale(1); /* au survol le coeur plein apparait */
+    }
+}
+
+.icone-vide {
+    &:hover {
+        color: $couleur-primaire;
+    }
+}
+
+.icone-pleine {
+    color: transparent; /* En mettant transparent le gradient peut s'afficher */
+    background-image: linear-gradient(to bottom, $couleur-primaire, $couleur-secondaire);
+    background-clip: text; /* permet d'avoir le fond en forme de coeur et non un carré */
+    -webkit-background-clip: text;
+    transform: scale(0); /* le coeur n'est pas visible, taille = 0 */
+    transform-origin: bottom; /* le coeur se remplit à partir du bas */
+    transition: transform 400ms ease-in-out;
 }
