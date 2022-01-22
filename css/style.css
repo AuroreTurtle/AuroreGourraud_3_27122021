@@ -52,27 +52,29 @@ td, th {
   font-family: "Roboto", sans-serif;
 }
 
-h1, h2 {
-  font-size: 20px;
+/* Police pour les titres des menus */
+h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 24px;
+}
+
+h1, h2, h3 {
   font-weight: bold;
 }
 
 h2 {
+  font-size: 20px;
   padding: 8% 0 5% 3%;
 }
 
 h3 {
-  font-weight: bold;
+  padding-bottom: 1%;
 }
 
 p {
-  font-size: 15px;
+  font-size: 14px;
 }
 
-/* Police pour les titres des menus
-h1 {
-    font-family: 'Shrikhand', cursive;
-} */
 /* Fichiers du dossier Components */
 a {
   text-decoration: none;
@@ -81,13 +83,15 @@ a {
 
 /* Couleurs */
 button {
-  color: white;
   background: linear-gradient(#FF79DA, #9356DC);
   border: none;
   border-radius: 20px;
   height: 40px;
   width: 190px;
   box-shadow: 5px 5px 5px #c9c6c6;
+}
+button a {
+  color: white;
 }
 button:hover {
   box-shadow: 5px 5px 5px #9c9a9a;
@@ -110,16 +114,14 @@ button:hover {
   right: 2%;
   transform: translate(-2%, -60%);
 }
-.carte_coeur:hover .icone-pleine {
+.carte_coeur:hover .carte_coeur--pleine {
   transform: scale(1);
   /* au survol le coeur plein apparait */
 }
-
-.icone-vide:hover {
+.carte_coeur--vide:hover {
   color: #9356DC;
 }
-
-.icone-pleine {
+.carte_coeur--pleine {
   color: transparent;
   /* En mettant transparent le gradient peut s'afficher */
   background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
@@ -133,11 +135,27 @@ button:hover {
   transition: transform 400ms ease-in-out;
 }
 
+/* Couleurs */
+/* Animation pour ajouter les plats que l'user souhaite à sa commande */
+.check {
+  background-color: #99E2D0;
+}
+.check .fa-check-circle {
+  color: white;
+}
+
 /* Fichiers du dossier Layout */
 /* Logo */
 header {
   display: flex;
   justify-content: center;
+}
+header a {
+  /*mettre à gauche la fleche*/
+  position: relative;
+  top: 20px;
+  left: -20%;
+  font-size: 20px;
 }
 header img {
   width: 170px;
@@ -182,18 +200,15 @@ footer .fas {
 /* Pour la présentation */
 #presentation {
   background-color: #e9e7e7;
-  padding: 5% 2% 8% 2%;
+  padding: 5% 16% 8% 16%;
   text-align: center;
 }
-#presentation h1 {
-  padding: 0 45px 0 45px;
+#presentation h2 {
+  padding-right: 10%;
 }
 #presentation p {
   color: #747070;
-  margin: 15px 10px 25px 10px;
-}
-#presentation a {
-  color: white;
+  margin: 5px 5px 25px 5px;
 }
 
 /* Etape de fonctionnement */
@@ -205,7 +220,7 @@ footer .fas {
   margin: 0 5% 10% 5%;
 }
 .fonctionnement p {
-  background-color: rgba(241, 237, 237, 0.918);
+  background-color: #f1eded;
   border-radius: 20px;
   width: 270px;
   height: 50px;
@@ -243,18 +258,18 @@ footer .fas {
 
 /* Restaurants */
 .resto {
-  background-color: rgba(241, 237, 237, 0.918);
+  background-color: #f1eded;
   padding-bottom: 10%;
 }
 
 .carte {
-  width: 95%;
+  width: 90%;
+  height: 230px;
   margin: 2% 5% 4% 5%;
   background-color: white;
   border-radius: 10px;
-  width: 335px;
-  height: 230px;
   position: relative;
+  box-shadow: 0 5px 5px #dfdddd;
 }
 .carte_image {
   height: 75%;
@@ -271,7 +286,7 @@ footer .fas {
   /* permet de centrer l'image sur l'assiette */
   object-position: 0% 62%;
 }
-.carte_image_texte {
+.carte_image_nouv {
   font-weight: bold;
   color: green;
   background-color: #99E2D0;
@@ -283,8 +298,61 @@ footer .fas {
   padding: 7px;
 }
 .carte_description {
-  padding: 3%;
+  padding: 4% 3% 4% 3%;
   position: relative;
+}
+
+/* Couleurs */
+main {
+  background-color: #f1eded;
+}
+main .bouton {
+  display: flex;
+  justify-content: center;
+  transform: translate(0%, -100%);
+}
+
+.menu {
+  background-color: #f1eded;
+  border-radius: 20px 20px 0 0;
+  transform: translate(0%, -7%);
+  padding-bottom: 1%;
+}
+.menu_entete {
+  padding: 6% 4% 0 4%;
+  position: relative;
+}
+.menu_coeur {
+  transform: translate(-50%, -3%);
+}
+.menu_coeur .fa-heart {
+  font-size: 24px;
+}
+
+.plat_titre {
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 16px;
+  width: 10%;
+  border-bottom: 2px solid #99E2D0;
+  padding-bottom: 1%;
+  padding-left: 0;
+  margin-left: 5%;
+  margin-bottom: 3%;
+}
+.plat_description {
+  background-color: white;
+  border-radius: 10px;
+  margin: 4%;
+  padding: 3% 3% 3% 2%;
+  box-shadow: 0 5px 5px #dfdddd;
+}
+.plat_description--aligne {
+  display: flex;
+  justify-content: space-between;
+}
+.plat_prix {
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */

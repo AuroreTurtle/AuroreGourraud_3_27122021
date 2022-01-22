@@ -1,0 +1,10 @@
+@import "../utils/variables";
+
+/* Animation pour ajouter les plats que l'user souhaite à sa commande */
+.check {
+    background-color: $couleur-tertiaire;
+    
+    .fa-check-circle {
+        color: white;
+    }
+}
