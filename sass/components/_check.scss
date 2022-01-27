@@ -1,10 +1,58 @@
 @import "../utils/variables";
 
 /* Animation pour ajouter les plats que l'user souhaite à sa commande */
-.check {
-    background-color: $couleur-tertiaire;
+.plat_check {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 65px;
+
+    &:hover {
+        background-color: $couleur-tertiaire;
+        border-radius: 0 10px 10px 0;
+        animation: affichage-check 200ms;
+    }
     
     .fa-check-circle {
-        color: white;
+        color: transparent;
+        position: absolute;
+        font-size: 20px;
+        padding: 20px;
+
+        /* pour centrer l'icone check */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &:hover {
+            color: white;
+            animation: rotation-check 1s;
+        }
+        
+    }
+}
+
+/* Animation pour faire la rotation du check */
+@keyframes rotation-check{
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Animation pour afficher progressivement le check */
+@keyframes affichage-check {
+    0% {
+        width: 0px;
+    }
+    50% {
+        width: 33px;
+    }    
+    100% {
+        width:65px;
     }
 }

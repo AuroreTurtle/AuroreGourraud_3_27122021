@@ -1,12 +1,15 @@
 @import "../utils/variables";
 
-main {
-    background-color: $couleur-principal-fond;
 
+article {
     .bouton {
         display: flex;
         justify-content: center;
         transform: translate(0%, -100%);
+        background-color: $couleur-principal-fond;
+        
+        padding-bottom: 30%;
+        transform: translate(0%, 55%);
     }
 }
 
@@ -22,7 +25,7 @@ main {
     }
 
     &_coeur {
-        transform: translate(-50%, -3%);
+        transform: translate(-50%, -11%);
 
         .fa-heart {
             font-size: 24px;  
@@ -44,11 +47,16 @@ main {
     }
 
     &_description {
+        position: relative;
         background-color: white;
         border-radius: 10px;
         margin: 4%;
         padding: 3% 3% 3% 2%;
         box-shadow: 0 5px 5px rgb(223, 221, 221);
+
+        &:hover{
+            cursor: pointer;
+        }
 
         &--aligne {
             display: flex;
@@ -58,5 +66,11 @@ main {
 
     &_prix {
         font-weight: bold;
+        margin-right: 3%;
+        transition: transform 1s;
+
+        &:hover {
+            transform: translateX(-100%);
+        }
     }
 }

@@ -137,13 +137,55 @@ button:hover {
 
 /* Couleurs */
 /* Animation pour ajouter les plats que l'user souhaite à sa commande */
-.check {
-  background-color: #99E2D0;
+.plat_check {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 65px;
 }
-.check .fa-check-circle {
+.plat_check:hover {
+  background-color: #99E2D0;
+  border-radius: 0 10px 10px 0;
+  animation: affichage-check 200ms;
+}
+.plat_check .fa-check-circle {
+  color: transparent;
+  position: absolute;
+  font-size: 20px;
+  padding: 20px;
+  /* pour centrer l'icone check */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.plat_check .fa-check-circle:hover {
   color: white;
+  animation: rotation-check 1s;
 }
 
+/* Animation pour faire la rotation du check */
+@keyframes rotation-check {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+/* Animation pour afficher progressivement le check */
+@keyframes affichage-check {
+  0% {
+    width: 0px;
+  }
+  50% {
+    width: 33px;
+  }
+  100% {
+    width: 65px;
+  }
+}
 /* Fichiers du dossier Layout */
 /* Logo */
 header {
@@ -303,13 +345,13 @@ footer .fas {
 }
 
 /* Couleurs */
-main {
-  background-color: #f1eded;
-}
-main .bouton {
+article .bouton {
   display: flex;
   justify-content: center;
   transform: translate(0%, -100%);
+  background-color: #f1eded;
+  padding-bottom: 30%;
+  transform: translate(0%, 55%);
 }
 
 .menu {
@@ -323,7 +365,7 @@ main .bouton {
   position: relative;
 }
 .menu_coeur {
-  transform: translate(-50%, -3%);
+  transform: translate(-50%, -11%);
 }
 .menu_coeur .fa-heart {
   font-size: 24px;
@@ -341,11 +383,15 @@ main .bouton {
   margin-bottom: 3%;
 }
 .plat_description {
+  position: relative;
   background-color: white;
   border-radius: 10px;
   margin: 4%;
   padding: 3% 3% 3% 2%;
   box-shadow: 0 5px 5px #dfdddd;
+}
+.plat_description:hover {
+  cursor: pointer;
 }
 .plat_description--aligne {
   display: flex;
@@ -353,6 +399,11 @@ main .bouton {
 }
 .plat_prix {
   font-weight: bold;
+  margin-right: 3%;
+  transition: transform 1s;
+}
+.plat_prix:hover {
+  transform: translateX(-100%);
 }
 
 /*# sourceMappingURL=style.css.map */
