@@ -145,11 +145,6 @@ button:hover {
   right: 0;
   width: 65px;
 }
-.plat_check:hover {
-  background-color: #99E2D0;
-  border-radius: 0 10px 10px 0;
-  animation: affichage-check 200ms;
-}
 .plat_check .fa-check-circle {
   color: transparent;
   position: absolute;
@@ -160,9 +155,22 @@ button:hover {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.plat_check .fa-check-circle:hover {
+
+/* Au survol de la souris */
+.plat_description:hover .plat_check {
+  background-color: #99E2D0;
+  border-radius: 0 10px 10px 0;
+  animation: affichage-check 200ms;
+}
+
+.plat_description:hover .fa-check-circle {
   color: white;
   animation: rotation-check 1s;
+}
+
+.plat_description:hover .plat_prix {
+  transform: translateX(-100%);
+  margin-right: 15%;
 }
 
 /* Animation pour faire la rotation du check */
@@ -351,15 +359,6 @@ footer .fas {
   object-fit: cover;
 }
 
-article .bouton {
-  display: flex;
-  justify-content: center;
-  transform: translate(0%, -100%);
-  background-color: #f1eded;
-  padding-bottom: 30%;
-  transform: translate(0%, 40%);
-}
-
 .menu {
   background-color: #f1eded;
   border-radius: 35px 35px 0 0;
@@ -402,14 +401,26 @@ article .bouton {
 .plat_description--aligne {
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
+  /* contenue rogné */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  /* pour rajouter ... quand le prix bouge*/
 }
 .plat_prix {
   font-weight: bold;
   margin-right: 3%;
   transition: transform 1s;
 }
-.plat_prix:hover {
-  transform: translateX(-100%);
+
+/* Bouton commander */
+article .bouton {
+  display: flex;
+  justify-content: center;
+  transform: translate(0%, -100%);
+  background-color: #f1eded;
+  padding-bottom: 30%;
+  transform: translate(0%, 40%);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -8,12 +8,6 @@
     bottom: 0;
     right: 0;
     width: 65px;
-
-    &:hover {
-        background-color: $couleur-tertiaire;
-        border-radius: 0 10px 10px 0;
-        animation: affichage-check 200ms;
-    }
     
     .fa-check-circle {
         color: transparent;
@@ -24,14 +18,25 @@
         /* pour centrer l'icone check */
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
-
-        &:hover {
-            color: white;
-            animation: rotation-check 1s;
-        }
-        
+        transform: translate(-50%, -50%);        
     }
+}
+
+/* Au survol de la souris */
+.plat_description:hover .plat_check {
+    background-color: $couleur-tertiaire;
+    border-radius: 0 10px 10px 0;
+    animation: affichage-check 200ms;
+}
+
+.plat_description:hover .fa-check-circle { 
+    color: white;
+    animation: rotation-check 1s;
+}
+
+.plat_description:hover .plat_prix {
+    transform: translateX(-100%);
+    margin-right: 15%;
 }
 
 /* Animation pour faire la rotation du check */

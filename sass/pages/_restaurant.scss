@@ -10,18 +10,6 @@
     
 }
 
-article {
-    .bouton {
-        display: flex;
-        justify-content: center;
-        transform: translate(0%, -100%);
-        background-color: $couleur-principal-fond;
-        
-        padding-bottom: 30%;
-        transform: translate(0%, 40%);
-    }
-}
-
 .menu {
     background-color: $couleur-principal-fond;
     border-radius: 35px 35px 0 0;
@@ -70,6 +58,10 @@ article {
         &--aligne {
             display: flex;
             justify-content: space-between;
+            
+            overflow:hidden; /* contenue rogné */
+            white-space: nowrap;
+            text-overflow: ellipsis; /* pour rajouter ... quand le prix bouge*/
         }
     }
 
@@ -77,9 +69,18 @@ article {
         font-weight: bold;
         margin-right: 3%;
         transition: transform 1s;
+    }
+}
 
-        &:hover {
-            transform: translateX(-100%);
-        }
+/* Bouton commander */
+article {
+    .bouton {
+        display: flex;
+        justify-content: center;
+        transform: translate(0%, -100%);
+        background-color: $couleur-principal-fond;
+        
+        padding-bottom: 30%;
+        transform: translate(0%, 40%);
     }
 }
