@@ -26,7 +26,7 @@
 .plat_description:hover .plat_check {
     background-color: $couleur-tertiaire;
     border-radius: 0 10px 10px 0;
-    animation: affichage-check 200ms;
+    animation: affichage-check 1s reverse; /* 200ms*/
 }
 
 .plat_description:hover .fa-check-circle { 
@@ -36,10 +36,12 @@
 
 .plat_description:hover .plat_prix {
     transform: translateX(-100%);
+    margin-left: 15%;
     margin-right: 15%;
 }
 
-/* Animation pour faire la rotation du check */
+/* ----- Animations ------- */
+/* Pour faire la rotation du check */
 @keyframes rotation-check{
     0%{
         transform: translate(-50%, -50%) rotate(0deg);
@@ -49,7 +51,16 @@
     }
 }
 
-/* Animation pour afficher progressivement le check */
+@keyframes rotation-check-off{
+    0%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+/* Pour afficher progressivement le check */
 @keyframes affichage-check {
     0% {
         width: 0px;
@@ -59,5 +70,17 @@
     }    
     100% {
         width:65px;
+    }
+}
+
+@keyframes affichage-check-off {
+    0% {
+        width: 65px;
+    }
+    50% {
+        width: 33px;
+    }    
+    100% {
+        width:0px;
     }
 }

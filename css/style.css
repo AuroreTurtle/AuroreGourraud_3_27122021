@@ -160,7 +160,8 @@ button:hover {
 .plat_description:hover .plat_check {
   background-color: #99E2D0;
   border-radius: 0 10px 10px 0;
-  animation: affichage-check 200ms;
+  animation: affichage-check 1s reverse;
+  /* 200ms*/
 }
 
 .plat_description:hover .fa-check-circle {
@@ -170,10 +171,12 @@ button:hover {
 
 .plat_description:hover .plat_prix {
   transform: translateX(-100%);
+  margin-left: 15%;
   margin-right: 15%;
 }
 
-/* Animation pour faire la rotation du check */
+/* ----- Animations ------- */
+/* Pour faire la rotation du check */
 @keyframes rotation-check {
   0% {
     transform: translate(-50%, -50%) rotate(0deg);
@@ -182,7 +185,15 @@ button:hover {
     transform: translate(-50%, -50%) rotate(360deg);
   }
 }
-/* Animation pour afficher progressivement le check */
+@keyframes rotation-check-off {
+  0% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+/* Pour afficher progressivement le check */
 @keyframes affichage-check {
   0% {
     width: 0px;
@@ -192,6 +203,17 @@ button:hover {
   }
   100% {
     width: 65px;
+  }
+}
+@keyframes affichage-check-off {
+  0% {
+    width: 65px;
+  }
+  50% {
+    width: 33px;
+  }
+  100% {
+    width: 0px;
   }
 }
 /* Fichiers du dossier Layout */
@@ -241,6 +263,9 @@ footer .fas {
   font-weight: bold;
   padding: 5px 0 5px 0;
   text-align: center;
+}
+#localisation_restaurant {
+  background-color: #d1cece;
 }
 #localisation input {
   border: none;
@@ -353,6 +378,87 @@ footer .fas {
 }
 
 /* Couleurs */
+/* Couleurs */
+/* Animation pour ajouter les plats que l'user souhaite à sa commande */
+.plat_check {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 65px;
+}
+.plat_check .fa-check-circle {
+  color: transparent;
+  position: absolute;
+  font-size: 20px;
+  padding: 20px;
+  /* pour centrer l'icone check */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Au survol de la souris */
+.plat_description:hover .plat_check {
+  background-color: #99E2D0;
+  border-radius: 0 10px 10px 0;
+  animation: affichage-check 1s reverse;
+  /* 200ms*/
+}
+
+.plat_description:hover .fa-check-circle {
+  color: white;
+  animation: rotation-check 1s;
+}
+
+.plat_description:hover .plat_prix {
+  transform: translateX(-100%);
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+/* ----- Animations ------- */
+/* Pour faire la rotation du check */
+@keyframes rotation-check {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes rotation-check-off {
+  0% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+/* Pour afficher progressivement le check */
+@keyframes affichage-check {
+  0% {
+    width: 0px;
+  }
+  50% {
+    width: 33px;
+  }
+  100% {
+    width: 65px;
+  }
+}
+@keyframes affichage-check-off {
+  0% {
+    width: 65px;
+  }
+  50% {
+    width: 33px;
+  }
+  100% {
+    width: 0px;
+  }
+}
 .menu_image img {
   width: 100%;
   height: 270px;
@@ -394,6 +500,8 @@ footer .fas {
   margin: 4%;
   padding: 3% 3% 3% 2%;
   box-shadow: 0 5px 5px #dfdddd;
+  /*transition-duration: 1s;*/
+  /* animation: affichage-check 1s forwards;*/
 }
 .plat_description:hover {
   cursor: pointer;
@@ -401,19 +509,23 @@ footer .fas {
 .plat_description--aligne {
   display: flex;
   justify-content: space-between;
-  overflow: hidden;
-  /* contenue rogné */
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  /* pour rajouter ... quand le prix bouge*/
+  flex-grow: 60px;
 }
 .plat_prix {
   font-weight: bold;
   margin-right: 3%;
   transition: transform 1s;
 }
+.plat_texte {
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  /* contenu rogné */
+  text-overflow: ellipsis;
+  /* pour rajouter ... quand le prix bouge*/
+}
 
-/* Bouton commander */
+/* Pour positionner le bouton commander */
 article .bouton {
   display: flex;
   justify-content: center;

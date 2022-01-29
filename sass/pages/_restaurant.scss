@@ -1,4 +1,5 @@
 @import "../utils/variables";
+@import "../components/check";
 
 .menu_image {
     
@@ -50,6 +51,8 @@
         margin: 4%;
         padding: 3% 3% 3% 2%;
         box-shadow: 0 5px 5px rgb(223, 221, 221);
+        /*transition-duration: 1s;*/
+       /* animation: affichage-check 1s forwards;*/
 
         &:hover{
             cursor: pointer;
@@ -58,10 +61,7 @@
         &--aligne {
             display: flex;
             justify-content: space-between;
-            
-            overflow:hidden; /* contenue rogné */
-            white-space: nowrap;
-            text-overflow: ellipsis; /* pour rajouter ... quand le prix bouge*/
+            flex-grow: 60px;
         }
     }
 
@@ -70,9 +70,17 @@
         margin-right: 3%;
         transition: transform 1s;
     }
+
+    &_texte {
+        flex-grow: 1;
+
+        white-space: nowrap;
+        overflow:hidden; /* contenu rogné */       
+        text-overflow: ellipsis; /* pour rajouter ... quand le prix bouge*/
+    }
 }
 
-/* Bouton commander */
+/* Pour positionner le bouton commander */
 article {
     .bouton {
         display: flex;
