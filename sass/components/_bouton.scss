@@ -36,11 +36,13 @@ button {
     transform: translate(-2%, -60%);
 
     &:hover .carte_coeur--pleine {
+        cursor: pointer;
         transform: scale(1); /* au survol le coeur plein apparait */
     }
 
     &--vide {
         &:hover {
+            cursor: pointer;
             color: $couleur-primaire;
         }
     }

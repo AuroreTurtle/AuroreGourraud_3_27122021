@@ -51,8 +51,9 @@
         margin: 4%;
         padding: 3% 3% 3% 2%;
         box-shadow: 0 5px 5px rgb(223, 221, 221);
-        /*transition-duration: 1s;*/
-       /* animation: affichage-check 1s forwards;*/
+
+        animation: affichage-check 300ms reverse;
+        /*animation: affichage-check 300ms reverse;*/
 
         &:hover{
             cursor: pointer;

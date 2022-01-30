@@ -22,18 +22,21 @@
     }
 }
 
-/* Au survol de la souris */
+/* ------ Au survol de la souris ------- */
+/* Apparition du check */
 .plat_description:hover .plat_check {
     background-color: $couleur-tertiaire;
     border-radius: 0 10px 10px 0;
-    animation: affichage-check 1s reverse; /* 200ms*/
+    animation: affichage-check 300ms forwards;  /*forwards*/
 }
 
+/* Rotation de l'icone */
 .plat_description:hover .fa-check-circle { 
     color: white;
     animation: rotation-check 1s;
 }
 
+/* Déplacement du prix */
 .plat_description:hover .plat_prix {
     transform: translateX(-100%);
     margin-left: 15%;
@@ -51,36 +54,33 @@
     }
 }
 
-@keyframes rotation-check-off{
-    0%{
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
-    100%{
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-}
-
 /* Pour afficher progressivement le check */
 @keyframes affichage-check {
     0% {
-        width: 0px;
+        transform: scaleX(0);
+        transform-origin: right;
     }
     50% {
-        width: 33px;
-    }    
-    100% {
-        width:65px;
+        transform: scaleX(0.5);
+        transform-origin: right;
     }
+    100% {
+        transform: scaleX(1);
+        transform-origin: right;
+    }    
 }
 
 @keyframes affichage-check-off {
     0% {
-        width: 65px;
+        transform: scaleX(1);
+        transform-origin: right;
     }
     50% {
-        width: 33px;
+        transform: scaleX(0.5);
+        transform-origin: right;
     }    
     100% {
-        width:0px;
+        transform: scaleX(0);
+        transform-origin: right;
     }
 }
