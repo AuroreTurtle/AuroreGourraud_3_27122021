@@ -8,6 +8,10 @@
     bottom: 0;
     right: 0;
     width: 65px;
+
+    @include ordinateur {
+        width: 90px;
+    }
     
     .fa-check-circle {
         color: transparent;
@@ -41,6 +45,11 @@
     transform: translateX(-100%);
     margin-left: 15%;
     margin-right: 15%;
+
+    @include ordinateur {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 }
 
 /* ----- Animations ------- */

@@ -2,6 +2,7 @@
 /* Fichiers du dossier Utils */
 /* Couleurs */
 /* Tablette */
+/* Ordinateur */
 /* Fichiers du dossier Base */
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
@@ -65,7 +66,12 @@ h1, h2, h3 {
 
 h2 {
   font-size: 20px;
-  padding: 8% 0 5% 3%;
+  padding: 8% 0 5% 0;
+}
+@media screen and (min-width: 992px) {
+  h2 {
+    padding: 5% 0 3% 0;
+  }
 }
 
 h3 {
@@ -160,6 +166,11 @@ button:hover {
   right: 0;
   width: 65px;
 }
+@media screen and (min-width: 992px) {
+  .plat_check {
+    width: 90px;
+  }
+}
 .plat_check .fa-check-circle {
   color: transparent;
   position: absolute;
@@ -191,6 +202,12 @@ button:hover {
   transform: translateX(-100%);
   margin-left: 15%;
   margin-right: 15%;
+}
+@media screen and (min-width: 992px) {
+  .plat_description:hover .plat_prix {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 }
 
 /* ----- Animations ------- */
@@ -395,6 +412,11 @@ header a {
     left: -35%;
   }
 }
+@media screen and (min-width: 992px) {
+  header a {
+    left: -40%;
+  }
+}
 header img {
   width: 170px;
   margin: 20px 0 10px 0;
@@ -409,6 +431,11 @@ footer img {
   /* permet d'inverser les couleurs de l'image donc ici mettre le logo en blanc */
   width: 100px;
   margin-bottom: 3%;
+}
+@media screen and (min-width: 992px) {
+  footer img {
+    margin-bottom: 0;
+  }
 }
 footer li {
   padding-top: 2%;
@@ -441,15 +468,42 @@ footer .fas {
 /* Pour la présentation */
 #presentation {
   background-color: #e9e7e7;
-  padding: 5% 16% 8% 16%;
+  padding: 5% 16% 15% 16%;
   text-align: center;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  #presentation {
+    padding: 2% 15% 10% 15%;
+  }
+}
+@media screen and (min-width: 992px) {
+  #presentation {
+    padding: 0 15% 5% 15%;
+  }
 }
 #presentation h2 {
   padding-right: 10%;
 }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  #presentation h2 {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  #presentation h2 {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
 #presentation p {
   color: #747070;
-  margin: 5px 5px 25px 5px;
+  margin: 2% 2% 10% 2%;
+}
+@media screen and (min-width: 992px) {
+  #presentation p {
+    margin: 0 0 5% 0;
+  }
 }
 
 /* Etape de fonctionnement */
@@ -457,11 +511,21 @@ footer .fas {
   display: flex;
   flex-wrap: wrap;
   margin: 0 5% 10% 5%;
-  /* Tablette */
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .fonctionnement {
     flex-direction: column;
+  }
+}
+@media screen and (min-width: 992px) {
+  .fonctionnement {
+    margin: 0 5% 5% 5%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .fonctionnement h2 {
+    order: -1;
+    flex: 1 0 100%;
   }
 }
 .fonctionnement p {
@@ -472,11 +536,15 @@ footer .fas {
   text-align: center;
   padding: 15px 30px 0 0;
   box-shadow: 5px 5px 5px #dbd9d9;
-  /* Tablette */
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .fonctionnement p {
     width: 400px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .fonctionnement p {
+    width: 300px;
   }
 }
 .fonctionnement p:hover {
@@ -492,8 +560,13 @@ footer .fas {
   justify-content: center;
   margin-top: 10px;
   font-weight: bold;
-  margin-left: 3%;
+  margin-left: 2%;
   margin-bottom: 3%;
+}
+@media screen and (min-width: 992px) {
+  .fonctionnement_titre {
+    margin-right: 2%;
+  }
 }
 .fonctionnement_titre:hover .fas {
   color: #9356DC;
@@ -510,9 +583,15 @@ footer .fas {
   margin-right: -10px;
   z-index: 1;
   font-size: 10px;
-  /* Tablette */
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
+  .fonctionnement_step {
+    height: 30px;
+    width: 30px;
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 992px) {
   .fonctionnement_step {
     height: 30px;
     width: 30px;
@@ -524,6 +603,8 @@ footer .fas {
 .resto {
   background-color: #f1eded;
   padding-bottom: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .resto {
@@ -531,7 +612,23 @@ footer .fas {
     flex-wrap: wrap;
   }
 }
+@media screen and (min-width: 992px) {
+  .resto {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.resto h2 {
+  margin-left: 2%;
+}
 @media screen and (min-width: 768px) and (max-width: 991px) {
+  .resto h2 {
+    /* permet de mettre le titre en haut sur toute la ligne et avoir les cartes en dessous */
+    order: -1;
+    flex: 1 0 100%;
+  }
+}
+@media screen and (min-width: 992px) {
   .resto h2 {
     /* permet de mettre le titre en haut sur toute la ligne et avoir les cartes en dessous */
     order: -1;
@@ -542,7 +639,7 @@ footer .fas {
 .carte {
   width: 90%;
   height: 230px;
-  margin: 2% 5% 4% 5%;
+  margin: 2% 5% 4% 2%;
   background-color: white;
   border-radius: 10px;
   position: relative;
@@ -551,6 +648,13 @@ footer .fas {
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .carte {
     width: 40%;
+    margin: 2% 1% 4% 6%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .carte {
+    width: 40%;
+    height: 280px;
     margin: 2% 1% 4% 6%;
   }
 }
@@ -603,9 +707,19 @@ footer .fas {
     transform: translate(0%, -2%);
   }
 }
+@media screen and (min-width: 992px) {
+  .menu {
+    transform: translate(0%, -1%);
+  }
+}
 .menu_entete {
   padding: 6% 4% 0 4%;
   position: relative;
+}
+@media screen and (min-width: 992px) {
+  .menu_entete {
+    padding: 4% 4% 0 4%;
+  }
 }
 .menu_coeur {
   transform: translate(-50%, -11%);
@@ -665,6 +779,13 @@ footer .fas {
     width: 6%;
   }
 }
+@media screen and (min-width: 992px) {
+  .plat_titre {
+    font-size: 18px;
+    width: 3%;
+    margin-bottom: 0;
+  }
+}
 .plat_description {
   position: relative;
   background-color: white;
@@ -674,6 +795,12 @@ footer .fas {
   box-shadow: 0 5px 5px #dfdddd;
   animation: affichage-check 300ms reverse;
   /*animation: affichage-check 300ms reverse;*/
+}
+@media screen and (min-width: 992px) {
+  .plat_description {
+    margin: 2% 4% 2% 4%;
+    padding: 2% 3% 2% 2%;
+  }
 }
 .plat_description:hover {
   cursor: pointer;
@@ -709,6 +836,11 @@ article .bouton {
 @media screen and (min-width: 768px) and (max-width: 991px) {
   article .bouton {
     padding-bottom: 10%;
+  }
+}
+@media screen and (min-width: 992px) {
+  article .bouton {
+    padding-bottom: 5%;
   }
 }
 

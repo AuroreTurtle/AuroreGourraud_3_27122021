@@ -4,3 +4,10 @@
         @content;
     }
 }
+
+/* Ordinateur */
+@mixin ordinateur {
+    @media screen and (min-width: 992px) {
+        @content;
+    }
+}

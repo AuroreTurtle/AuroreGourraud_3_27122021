@@ -13,6 +13,10 @@ header {
         @include tablette {
             left: -35%;
         }
+
+        @include ordinateur {
+            left: -40%;
+        }
     }
 
     img {

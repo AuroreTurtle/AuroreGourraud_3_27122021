@@ -6,6 +6,10 @@ footer {
         filter: invert(100%); /* permet d'inverser les couleurs de l'image donc ici mettre le logo en blanc */
         width: 100px;
         margin-bottom: 3%;
+
+        @include ordinateur {
+            margin-bottom: 0;
+        }
     }
 
     li{

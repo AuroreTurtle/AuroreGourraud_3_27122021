@@ -15,7 +15,11 @@ h1, h2, h3 {
 
 h2 {
     font-size: 20px;
-    padding: 8% 0 5% 3%;
+    padding: 8% 0 5% 0;
+
+    @include ordinateur {
+        padding: 5% 0 3% 0;
+    }
 }
 
 h3 {
