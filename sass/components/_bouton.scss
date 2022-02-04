@@ -7,6 +7,12 @@ button {
     height: 40px;
     width: 190px;
     box-shadow: 5px 5px 5px rgb(201, 198, 198);
+    cursor: pointer;
+
+    @include tablette {
+        width: 210px;
+        font-size: 14px;
+    }
 
     a {
         color: white;

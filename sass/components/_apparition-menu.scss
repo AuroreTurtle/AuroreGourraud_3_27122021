@@ -1,7 +1,7 @@
 /* Animation pour faire apparaitre le menu de bas en haut */
 @mixin animation-glissement {
     /* pour prendre chaque élément un par un et les faire apparaitre avec un délai entre chaque */ 
-    @for $i from 1 through 4 {
+    @for $i from 1 through 5 {
         .plat_description:nth-child(#{$i}n) { 
             animation: glissement 700ms forwards;
             animation-delay: #{$i * 0.25}s;

@@ -95,6 +95,13 @@ button {
   height: 40px;
   width: 190px;
   box-shadow: 5px 5px 5px #c9c6c6;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  button {
+    width: 210px;
+    font-size: 14px;
+  }
 }
 button a {
   color: white;
@@ -383,6 +390,11 @@ header a {
   left: -20%;
   font-size: 20px;
 }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  header a {
+    left: -35%;
+  }
+}
 header img {
   width: 170px;
   margin: 20px 0 10px 0;
@@ -447,7 +459,7 @@ footer .fas {
   margin: 0 5% 10% 5%;
   /* Tablette */
 }
-@media (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .fonctionnement {
     flex-direction: column;
   }
@@ -500,7 +512,7 @@ footer .fas {
   font-size: 10px;
   /* Tablette */
 }
-@media (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .fonctionnement_step {
     height: 30px;
     width: 30px;
@@ -513,6 +525,19 @@ footer .fas {
   background-color: #f1eded;
   padding-bottom: 10%;
 }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .resto {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .resto h2 {
+    /* permet de mettre le titre en haut sur toute la ligne et avoir les cartes en dessous */
+    order: -1;
+    flex: 1 0 100%;
+  }
+}
 
 .carte {
   width: 90%;
@@ -522,6 +547,12 @@ footer .fas {
   border-radius: 10px;
   position: relative;
   box-shadow: 0 5px 5px #dfdddd;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .carte {
+    width: 40%;
+    margin: 2% 1% 4% 6%;
+  }
 }
 .carte_image {
   height: 75%;
@@ -567,6 +598,11 @@ footer .fas {
   transform: translate(0%, -5%);
   padding-bottom: 1%;
 }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .menu {
+    transform: translate(0%, -2%);
+  }
+}
 .menu_entete {
   padding: 6% 4% 0 4%;
   position: relative;
@@ -598,6 +634,10 @@ footer .fas {
   animation: glissement 700ms forwards;
   animation-delay: 1s;
 }
+.plat .plat_description:nth-child(5n) {
+  animation: glissement 700ms forwards;
+  animation-delay: 1.25s;
+}
 @keyframes glissement {
   0% {
     transform: translateY(30px);
@@ -618,6 +658,12 @@ footer .fas {
   padding-left: 0;
   margin-left: 5%;
   margin-bottom: 3%;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .plat_titre {
+    font-size: 18px;
+    width: 6%;
+  }
 }
 .plat_description {
   position: relative;
@@ -659,6 +705,11 @@ article .bouton {
   background-color: #f1eded;
   padding-bottom: 30%;
   transform: translate(0%, 40%);
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  article .bouton {
+    padding-bottom: 10%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
