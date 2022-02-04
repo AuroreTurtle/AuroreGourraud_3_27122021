@@ -27,7 +27,7 @@
 .plat_description:hover .plat_check {
     background-color: $couleur-tertiaire;
     border-radius: 0 10px 10px 0;
-    animation: affichage-check 300ms forwards;  /*forwards*/
+    animation: affichage-check 300ms ;  /*forwards*/
 }
 
 /* Rotation de l'icone */

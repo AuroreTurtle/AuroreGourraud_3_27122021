@@ -1,5 +1,6 @@
 /* Fichiers du dossier Utils */
 @import "./utils/variables";
+@import "./utils/mixins";
 
 /* Fichiers du dossier Base */
 @import "./base/reset";
@@ -9,6 +10,7 @@
 @import "./components/link";
 @import "./components/bouton";
 @import "./components/check";
+@import "./components/apparition-menu";
 @import "./components/loader";
 
 /* Fichiers du dossier Layout */

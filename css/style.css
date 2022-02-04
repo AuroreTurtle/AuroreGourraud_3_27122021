@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* Fichiers du dossier Utils */
 /* Couleurs */
+/* Tablette */
 /* Fichiers du dossier Base */
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
@@ -73,6 +74,11 @@ h3 {
 
 p {
   font-size: 14px;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  p {
+    font-size: 16px;
+  }
 }
 
 /* Fichiers du dossier Components */
@@ -163,7 +169,7 @@ button:hover {
 .plat_description:hover .plat_check {
   background-color: #99E2D0;
   border-radius: 0 10px 10px 0;
-  animation: affichage-check 300ms forwards;
+  animation: affichage-check 300ms;
   /*forwards*/
 }
 
@@ -219,6 +225,7 @@ button:hover {
     transform-origin: right;
   }
 }
+/* Animation pour faire apparaitre le menu de bas en haut */
 /* Couleurs */
 /* Loader spinner */
 .loading {
@@ -436,10 +443,14 @@ footer .fas {
 /* Etape de fonctionnement */
 .fonctionnement {
   display: flex;
-  align-items: center;
-  flex-direction: row;
   flex-wrap: wrap;
   margin: 0 5% 10% 5%;
+  /* Tablette */
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .fonctionnement {
+    flex-direction: column;
+  }
 }
 .fonctionnement p {
   background-color: #f1eded;
@@ -449,6 +460,12 @@ footer .fas {
   text-align: center;
   padding: 15px 30px 0 0;
   box-shadow: 5px 5px 5px #dbd9d9;
+  /* Tablette */
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .fonctionnement p {
+    width: 400px;
+  }
 }
 .fonctionnement p:hover {
   background-color: #fcdef4;
@@ -481,6 +498,14 @@ footer .fas {
   margin-right: -10px;
   z-index: 1;
   font-size: 10px;
+  /* Tablette */
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .fonctionnement_step {
+    height: 30px;
+    width: 30px;
+    font-size: 12px;
+  }
 }
 
 /* Restaurants */
@@ -530,88 +555,6 @@ footer .fas {
 }
 
 /* Couleurs */
-/* Couleurs */
-/* Animation pour ajouter les plats que l'user souhaite à sa commande */
-.plat_check {
-  background-color: transparent;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 65px;
-}
-.plat_check .fa-check-circle {
-  color: transparent;
-  position: absolute;
-  font-size: 20px;
-  padding: 20px;
-  /* pour centrer l'icone check */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* ------ Au survol de la souris ------- */
-/* Apparition du check */
-.plat_description:hover .plat_check {
-  background-color: #99E2D0;
-  border-radius: 0 10px 10px 0;
-  animation: affichage-check 300ms forwards;
-  /*forwards*/
-}
-
-/* Rotation de l'icone */
-.plat_description:hover .fa-check-circle {
-  color: white;
-  animation: rotation-check 1s;
-}
-
-/* Déplacement du prix */
-.plat_description:hover .plat_prix {
-  transform: translateX(-100%);
-  margin-left: 15%;
-  margin-right: 15%;
-}
-
-/* ----- Animations ------- */
-/* Pour faire la rotation du check */
-@keyframes rotation-check {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
-/* Pour afficher progressivement le check */
-@keyframes affichage-check {
-  0% {
-    transform: scaleX(0);
-    transform-origin: right;
-  }
-  50% {
-    transform: scaleX(0.5);
-    transform-origin: right;
-  }
-  100% {
-    transform: scaleX(1);
-    transform-origin: right;
-  }
-}
-@keyframes affichage-check-off {
-  0% {
-    transform: scaleX(1);
-    transform-origin: right;
-  }
-  50% {
-    transform: scaleX(0.5);
-    transform-origin: right;
-  }
-  100% {
-    transform: scaleX(0);
-    transform-origin: right;
-  }
-}
 .menu_image img {
   width: 100%;
   height: 270px;
@@ -635,6 +578,36 @@ footer .fas {
   font-size: 24px;
 }
 
+.plat {
+  /* animation pour faire apparaitre les plats */
+  /* pour prendre chaque élément un par un et les faire apparaitre avec un délai entre chaque */
+}
+.plat .plat_description:nth-child(1n) {
+  animation: glissement 700ms forwards;
+  animation-delay: 0.25s;
+}
+.plat .plat_description:nth-child(2n) {
+  animation: glissement 700ms forwards;
+  animation-delay: 0.5s;
+}
+.plat .plat_description:nth-child(3n) {
+  animation: glissement 700ms forwards;
+  animation-delay: 0.75s;
+}
+.plat .plat_description:nth-child(4n) {
+  animation: glissement 700ms forwards;
+  animation-delay: 1s;
+}
+@keyframes glissement {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .plat_titre {
   font-weight: normal;
   text-transform: uppercase;

@@ -37,10 +37,13 @@
 /* Etape de fonctionnement */
 .fonctionnement {
     display: flex;
-    align-items: center;
-    flex-direction: row;
     flex-wrap: wrap;
     margin: 0 5% 10% 5%;
+
+    /* Tablette */
+    @media (min-width: 768px) and (max-width: 991px) {
+        flex-direction: column;
+    }
 
     p {
         background-color: $couleur-principal-fond;
@@ -50,6 +53,11 @@
         text-align: center;
         padding: 15px 30px 0 0;
         box-shadow: 5px 5px 5px rgb(219, 217, 217);
+
+        /* Tablette */
+        @include tablette {
+            width: 400px;
+        }
 
         &:hover {
             background-color: hsl(317, 84%, 93%);
@@ -87,6 +95,13 @@
         margin-right: -10px;
         z-index: 1;
         font-size: 10px;
+
+        /* Tablette */
+        @media (min-width: 768px) and (max-width: 991px) {
+            height: 30px;
+            width: 30px;
+            font-size: 12px;
+        }
     }
 }
 

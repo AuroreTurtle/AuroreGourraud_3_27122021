@@ -1,5 +1,4 @@
 @import "../utils/variables";
-@import "../components/check";
 
 .menu_image {
     
@@ -32,6 +31,9 @@
 }
 
 .plat {
+    /* animation pour faire apparaitre les plats */
+    @include animation-glissement ();
+
     &_titre {
         font-weight: normal;
         text-transform: uppercase;
