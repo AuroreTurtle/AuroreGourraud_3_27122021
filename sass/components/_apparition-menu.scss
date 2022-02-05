@@ -2,7 +2,7 @@
 @mixin animation-glissement {
     /* pour prendre chaque élément un par un et les faire apparaitre avec un délai entre chaque */ 
     @for $i from 1 through 5 {
-        .plat_description:nth-child(#{$i}n) { 
+        .plat_description:nth-child(#{$i}) { 
             animation: glissement 700ms forwards;
             animation-delay: #{$i * 0.25}s;
         }

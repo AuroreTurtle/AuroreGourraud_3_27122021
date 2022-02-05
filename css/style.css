@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* Fichiers du dossier Utils */
 /* Couleurs */
+/* ----- Media queries ----- */
 /* Tablette */
 /* Ordinateur */
 /* Fichiers du dossier Base */
@@ -159,12 +160,21 @@ button:hover {
 /* Couleurs */
 /* Animation pour ajouter les plats que l'user souhaite à sa commande */
 .plat_check {
-  background-color: transparent;
+  background-color: #99E2D0;
+  border-radius: 0 10px 10px 0;
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   width: 65px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 300ms ease-in-out;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .plat_check {
+    width: 80px;
+  }
 }
 @media screen and (min-width: 992px) {
   .plat_check {
@@ -172,7 +182,7 @@ button:hover {
   }
 }
 .plat_check .fa-check-circle {
-  color: transparent;
+  color: white;
   position: absolute;
   font-size: 20px;
   padding: 20px;
@@ -186,9 +196,7 @@ button:hover {
 /* Apparition du check */
 .plat_description:hover .plat_check {
   background-color: #99E2D0;
-  border-radius: 0 10px 10px 0;
-  animation: affichage-check 300ms;
-  /*forwards*/
+  transform: scaleX(1);
 }
 
 /* Rotation de l'icone */
@@ -202,6 +210,12 @@ button:hover {
   transform: translateX(-100%);
   margin-left: 15%;
   margin-right: 15%;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .plat_description:hover .plat_prix {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
 }
 @media screen and (min-width: 992px) {
   .plat_description:hover .plat_prix {
@@ -220,35 +234,6 @@ button:hover {
     transform: translate(-50%, -50%) rotate(360deg);
   }
 }
-/* Pour afficher progressivement le check */
-@keyframes affichage-check {
-  0% {
-    transform: scaleX(0);
-    transform-origin: right;
-  }
-  50% {
-    transform: scaleX(0.5);
-    transform-origin: right;
-  }
-  100% {
-    transform: scaleX(1);
-    transform-origin: right;
-  }
-}
-@keyframes affichage-check-off {
-  0% {
-    transform: scaleX(1);
-    transform-origin: right;
-  }
-  50% {
-    transform: scaleX(0.5);
-    transform-origin: right;
-  }
-  100% {
-    transform: scaleX(0);
-    transform-origin: right;
-  }
-}
 /* Animation pour faire apparaitre le menu de bas en haut */
 /* Couleurs */
 /* Loader spinner */
@@ -261,7 +246,7 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: loading-disparition 2s 2s forwards;
+  animation: loading-disparition 3s 5s forwards;
 }
 
 .loader {
@@ -278,13 +263,13 @@ button:hover {
   border: 10px solid transparent;
   border-bottom: 10px solid #99E2D0;
   border-radius: 50%;
-  animation: spinner 2s 5;
+  animation: spinner 3s 5;
   animation-timing-function: linear;
 }
 .loader_casserole {
   display: flex;
   width: 100%;
-  animation: casserole 2s 5;
+  animation: casserole 3s 5;
 }
 .loader_casserole--corps {
   width: 60%;
@@ -310,7 +295,7 @@ button:hover {
   height: 8px;
   background: lightgray;
   border-radius: 20px;
-  animation: ombre 2s 5;
+  animation: ombre 3s 5;
 }
 .loader p {
   position: relative;
@@ -732,23 +717,23 @@ footer .fas {
   /* animation pour faire apparaitre les plats */
   /* pour prendre chaque élément un par un et les faire apparaitre avec un délai entre chaque */
 }
-.plat .plat_description:nth-child(1n) {
+.plat .plat_description:nth-child(1) {
   animation: glissement 700ms forwards;
   animation-delay: 0.25s;
 }
-.plat .plat_description:nth-child(2n) {
+.plat .plat_description:nth-child(2) {
   animation: glissement 700ms forwards;
   animation-delay: 0.5s;
 }
-.plat .plat_description:nth-child(3n) {
+.plat .plat_description:nth-child(3) {
   animation: glissement 700ms forwards;
   animation-delay: 0.75s;
 }
-.plat .plat_description:nth-child(4n) {
+.plat .plat_description:nth-child(4) {
   animation: glissement 700ms forwards;
   animation-delay: 1s;
 }
-.plat .plat_description:nth-child(5n) {
+.plat .plat_description:nth-child(5) {
   animation: glissement 700ms forwards;
   animation-delay: 1.25s;
 }
@@ -793,8 +778,6 @@ footer .fas {
   margin: 4%;
   padding: 3% 3% 3% 2%;
   box-shadow: 0 5px 5px #dfdddd;
-  animation: affichage-check 300ms reverse;
-  /*animation: affichage-check 300ms reverse;*/
 }
 @media screen and (min-width: 992px) {
   .plat_description {

@@ -1,7 +1,7 @@
 @import "../utils/variables";
 
 /* Loader spinner */
-$duree: 2s;
+$duree: 3s;
 
 .loading {
     position: fixed;
@@ -12,7 +12,7 @@ $duree: 2s;
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: loading-disparition $duree 2s forwards;
+    animation: loading-disparition $duree 5s forwards;
 }
 
 .loader {
