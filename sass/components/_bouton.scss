@@ -1,21 +1,25 @@
 @import "../utils/variables";
 
-button {
+.bouton {
     background: linear-gradient($couleur-secondaire, $couleur-primaire);
     border: none;
     border-radius: 20px;
-    height: 40px;
     width: 190px;
+    padding: 6%;
     box-shadow: 5px 5px 5px rgb(201, 198, 198);
     cursor: pointer;
 
+    font-size: 14px;
+    color: white;
+    text-align: center;
+
     @include tablette {
         width: 210px;
-        font-size: 14px;
+        padding: 3%;
     }
 
-    a {
-        color: white;
+    @include ordinateur {
+        padding: 2%;
     }
 
     &:hover {
@@ -62,5 +66,4 @@ button {
         transform-origin: bottom; /* le coeur se remplit à partir du bas */
         transition: transform 400ms ease-in-out;
     }
-
 }

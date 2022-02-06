@@ -95,25 +95,30 @@ a {
 }
 
 /* Couleurs */
-button {
+.bouton {
   background: linear-gradient(#FF79DA, #9356DC);
   border: none;
   border-radius: 20px;
-  height: 40px;
   width: 190px;
+  padding: 6%;
   box-shadow: 5px 5px 5px #c9c6c6;
   cursor: pointer;
+  font-size: 14px;
+  color: white;
+  text-align: center;
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  button {
+  .bouton {
     width: 210px;
-    font-size: 14px;
+    padding: 3%;
   }
 }
-button a {
-  color: white;
+@media screen and (min-width: 992px) {
+  .bouton {
+    padding: 2%;
+  }
 }
-button:hover {
+.bouton:hover {
   box-shadow: 5px 5px 5px #9c9a9a;
   /* Couleurs s'éclaircissement au survol */
   background: linear-gradient(#f76ed0, #ac6ef7);
@@ -791,7 +796,6 @@ footer .fas {
 .plat_description--aligne {
   display: flex;
   justify-content: space-between;
-  flex-grow: 60px;
 }
 .plat_prix {
   font-weight: bold;
@@ -799,7 +803,6 @@ footer .fas {
   transition: transform 1s;
 }
 .plat_texte {
-  flex-grow: 1;
   white-space: nowrap;
   overflow: hidden;
   /* contenu rogné */
@@ -808,7 +811,7 @@ footer .fas {
 }
 
 /* Pour positionner le bouton commander */
-article .bouton {
+article .bouton--commande {
   display: flex;
   justify-content: center;
   transform: translate(0%, -100%);
@@ -817,13 +820,26 @@ article .bouton {
   transform: translate(0%, 40%);
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  article .bouton {
+  article .bouton--commande {
     padding-bottom: 10%;
   }
 }
 @media screen and (min-width: 992px) {
-  article .bouton {
+  article .bouton--commande {
     padding-bottom: 5%;
+  }
+}
+article .bouton--commande .bouton {
+  padding: 4%;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  article .bouton--commande .bouton {
+    padding: 2%;
+  }
+}
+@media screen and (min-width: 992px) {
+  article .bouton--commande .bouton {
+    padding: 1%;
   }
 }
 

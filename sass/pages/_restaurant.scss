@@ -88,7 +88,6 @@
         &--aligne {
             display: flex;
             justify-content: space-between;
-            flex-grow: 60px;
         }
     }
 
@@ -99,8 +98,6 @@
     }
 
     &_texte {
-        flex-grow: 1;
-
         white-space: nowrap;
         overflow:hidden; /* contenu rogné */       
         text-overflow: ellipsis; /* pour rajouter ... quand le prix bouge*/
@@ -109,7 +106,7 @@
 
 /* Pour positionner le bouton commander */
 article {
-    .bouton {
+    .bouton--commande {
         display: flex;
         justify-content: center;
         transform: translate(0%, -100%);
@@ -124,6 +121,18 @@ article {
 
         @include ordinateur {
             padding-bottom: 5%;
+        }
+
+        .bouton {
+            padding: 4%;
+
+            @include tablette {
+                padding: 2%;
+            }
+
+            @include ordinateur {
+                padding: 1%;
+            }
         }
     }
 }
