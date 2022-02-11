@@ -99,7 +99,7 @@
 
     &_texte {
         white-space: nowrap;
-        overflow:hidden; /* contenu rogné */       
+        overflow: hidden; /* contenu rogné */       
         text-overflow: ellipsis; /* pour rajouter ... quand le prix bouge*/
     }
 }

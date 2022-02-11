@@ -7,6 +7,10 @@
     padding: 3% 0 3% 0;
     text-align: center;
 
+    @include ordinateur {
+        padding: 1% 0 1% 0;
+    }
+
     &_restaurant {
         background-color: rgb(225, 227, 227);
         font-weight: bold;
