@@ -251,7 +251,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: loading-disparition 3s 5s forwards;
+  animation: loading-disparition 3s 4s forwards;
 }
 
 .loader {
@@ -265,9 +265,9 @@ a {
   z-index: -1;
   width: 60%;
   height: 45%;
+  border-radius: 50%;
   border: 10px solid transparent;
   border-bottom: 10px solid #99E2D0;
-  border-radius: 50%;
   animation: spinner 3s 5;
   animation-timing-function: linear;
 }
@@ -336,8 +336,8 @@ a {
     width: 25%;
   }
   50% {
-    left: 15%;
     width: 35%;
+    left: 15%;
   }
   70% {
     width: 30%;
@@ -413,8 +413,13 @@ header img {
 }
 
 footer {
-  background: rgba(0, 0, 0, 0.712);
+  background: rgba(0, 0, 0, 0.801);
   padding: 5%;
+}
+@media screen and (min-width: 992px) {
+  footer {
+    padding: 3%;
+  }
 }
 footer img {
   filter: invert(100%);
@@ -430,6 +435,11 @@ footer img {
 footer li {
   padding-top: 2%;
 }
+@media screen and (min-width: 992px) {
+  footer li {
+    padding-top: 1%;
+  }
+}
 footer a {
   color: white;
 }
@@ -441,14 +451,16 @@ footer .fas {
 /* Couleurs */
 /* Pour la localisation */
 #localisation {
-  background-color: #d1cece;
-  border-top: 2px solid grey;
-  font-weight: bold;
-  padding: 5px 0 5px 0;
+  background-color: #e1e3e3;
+  border-top: 3px solid #c0bebe;
+  padding: 3% 0 3% 0;
   text-align: center;
 }
 #localisation_restaurant {
-  background-color: #d1cece;
+  background-color: #e1e3e3;
+  font-weight: bold;
+  margin-left: 2%;
+  font-size: 14px;
 }
 #localisation input {
   border: none;
@@ -457,7 +469,7 @@ footer .fas {
 
 /* Pour la présentation */
 #presentation {
-  background-color: #e9e7e7;
+  background-color: #f0eeee;
   padding: 5% 16% 15% 16%;
   text-align: center;
 }
@@ -519,7 +531,7 @@ footer .fas {
   }
 }
 .fonctionnement p {
-  background-color: #f1eded;
+  background-color: #eeeeee;
   border-radius: 20px;
   width: 270px;
   height: 50px;
@@ -591,7 +603,7 @@ footer .fas {
 
 /* Restaurants */
 .resto {
-  background-color: #f1eded;
+  background-color: #eeeeee;
   padding-bottom: 10%;
   padding-left: 5%;
   padding-right: 5%;
@@ -687,7 +699,7 @@ footer .fas {
 }
 
 .menu {
-  background-color: #f1eded;
+  background-color: #eeeeee;
   border-radius: 35px 35px 0 0;
   transform: translate(0%, -5%);
   padding-bottom: 1%;
@@ -815,7 +827,7 @@ article .bouton--commande {
   display: flex;
   justify-content: center;
   transform: translate(0%, -100%);
-  background-color: #f1eded;
+  background-color: #eeeeee;
   padding-bottom: 30%;
   transform: translate(0%, 40%);
 }

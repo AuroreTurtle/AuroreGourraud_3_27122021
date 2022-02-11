@@ -2,14 +2,16 @@
 
 /* Pour la localisation */
 #localisation {
-    background-color: rgb(209, 206, 206);
-    border-top: 2px solid grey;
-    font-weight: bold;
-    padding: 5px 0 5px 0;
+    background-color: rgb(225, 227, 227);
+    border-top: 3px solid rgb(192, 190, 190);
+    padding: 3% 0 3% 0;
     text-align: center;
 
     &_restaurant {
-        background-color: rgb(209, 206, 206);
+        background-color: rgb(225, 227, 227);
+        font-weight: bold;
+        margin-left: 2%;
+        font-size: 14px;
     }
 
     input {
@@ -20,7 +22,7 @@
 
 /* Pour la présentation */
 #presentation {
-    background-color: rgb(233, 231, 231);
+    background-color: rgb(240, 238, 238);
     padding: 5% 16% 15% 16%;
     text-align: center;
 

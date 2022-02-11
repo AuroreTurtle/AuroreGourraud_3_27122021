@@ -12,7 +12,7 @@ $duree: 3s;
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: loading-disparition $duree 5s forwards;
+    animation: loading-disparition $duree 4s forwards;
 }
 
 .loader {
@@ -27,9 +27,9 @@ $duree: 3s;
         z-index: -1;
         width: 60%;
         height: 45%;
+        border-radius: 50%;
         border: 10px solid transparent;
         border-bottom: 10px solid $couleur-tertiaire;
-        border-radius: 50%;
         animation: spinner $duree 5;
         animation-timing-function: linear;
     }
@@ -105,8 +105,8 @@ $duree: 3s;
         width: 25%;
     }
     50% {
-        left: 15%;
         width: 35%;
+        left: 15%;
     }
     70% {
         width: 30%;

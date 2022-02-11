@@ -1,6 +1,10 @@
 footer {
-    background: rgba(0, 0, 0, 0.712);
+    background: rgba(0, 0, 0, 0.801);
     padding: 5%;
+
+    @include ordinateur {
+        padding: 3%;
+    }
 
     img {
         filter: invert(100%); /* permet d'inverser les couleurs de l'image donc ici mettre le logo en blanc */
@@ -14,6 +18,10 @@ footer {
 
     li{
         padding-top: 2%;
+
+        @include ordinateur {
+            padding-top: 1%;
+        }
     }
 
     a {
