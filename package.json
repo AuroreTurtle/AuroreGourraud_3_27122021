@@ -4,7 +4,8 @@
   "description": "Ce projet a été réalisé en décembre 2021 lors de ma formation de développeur front-end chez OpenClassrooms.",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+    "sass": "sass --watch ./sass/main.scss:./css/style.css",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/"
   },
   "repository": {
     "type": "git",
@@ -12,6 +13,7 @@
   },
   "author": "",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "bugs": {
     "url": "https://github.com/AuroreTurtle/AuroreGourraud_3_27122021/issues"
   },
