@@ -73,7 +73,7 @@
     }
 
     @include ordinateur {
-        margin: 0 5% 5% 5%;
+        margin: 0 3% 5% 3%;
     }
 
     h2 {
@@ -97,7 +97,7 @@
         }
 
         @include ordinateur {
-            width: 300px;
+            width: 260px;
         }
 
         &:hover {
